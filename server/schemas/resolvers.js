@@ -1,4 +1,4 @@
-const { AuthenicationError } = require("apollo-server-express");
+const { AuthenticationError } = require("apollo-server-express");
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
@@ -11,7 +11,7 @@ const resolvers = {
         );
         return userData;
       }
-      addEventListener: throw new AuthenicationError("not logged in");
+       throw new AuthenticationError("not logged in");
     },
   },
 
@@ -27,13 +27,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenicationError("Incorrect user");
+        throw new AuthenticationError("Incorrect user");
       }
 
       const correctPassword = await user.isCorrectPassword(password);
 
       if (!correctPassword) {
-        throw new AuthenicationError("Incorrect password");
+        throw new AuthenticationError("Incorrect password");
       }
 
       const token = signToken(user);
@@ -51,7 +51,7 @@ const resolvers = {
 
         return updated;
       }
-      throw new AuthenicationError("you need to log in");
+      throw new AuthenticationError("you need to log in");
     },
 
     removeBook: async (parent, { bookId }, context) => {
@@ -64,7 +64,7 @@ const resolvers = {
 
         return updated;
       }
-      throw new AuthenicationError("you need to log in");
+      throw new AuthenticationError("you need to log in");
     },
   },
 };
