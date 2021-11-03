@@ -30,9 +30,7 @@ To contribute to the project please fork this repo and clone this project to you
 
 ## Images
 
-![21-mern-homework-demo-01](https://user-images.githubusercontent.com/87721575/139555868-d07349ec-d64e-4262-89aa-572184ae1e57.gif)
-![21-mern-homework-demo-02](https://user-images.githubusercontent.com/87721575/139555869-04240f36-1236-4c5a-8d8c-4447ac374855.gif)
-![21-mern-homework-demo-03](https://user-images.githubusercontent.com/87721575/139555865-f943fd51-21fb-4e70-a974-587dd6e787e2.gif)
+https://user-images.githubusercontent.com/87721575/140234566-ef737af4-4b05-412c-ad1d-549d8f2318d7.mp4
 
 
 ## Contact
