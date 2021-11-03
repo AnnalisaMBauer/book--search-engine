@@ -28,14 +28,9 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await removeBook({
+      const {data}= await removeBook({
         variables: {bookId},
       });
-
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
 
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
@@ -59,7 +54,7 @@ const SavedBooks = () => {
       <Container>
         <h2>
           {userData.savedBooks?.length
-            ? `Viewing ${userData.savedBooks?.length} saved ${
+            ? `Viewing ${userData.savedBooks.length} saved ${
                 userData.savedBooks.length === 1 ? "book" : "books"
               }:`
             : "You have no saved books!"}
